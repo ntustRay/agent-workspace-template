@@ -41,7 +41,9 @@ Automatic discovery varies by agent. This template keeps the shared content read
 
 ## Initialize a new GitHub repository with init.sh
 
-Use this script when you have a fresh copy of the template files in a new directory without an existing `.git` directory. Do not run it inside this template's Git checkout or another existing Git repository. It initializes Git in the current directory and commits all non-ignored files, so review the files and remove secrets before running it.
+Use this script after downloading the template archive or copying its files into a fresh directory without a `.git` directory. If you create a repository with GitHub's **Use this template** button, skip this script because GitHub has already created the repository. Do not run the script inside this template's Git checkout or another existing Git repository.
+
+The script initializes Git in the current directory and commits all non-ignored files, so review the files and remove secrets before running it.
 
 ```bash
 bash init.sh <repo-name> [owner] [--private|--public|--internal]
@@ -54,7 +56,7 @@ bash init.sh my-agent-guidelines
 bash init.sh my-agent-guidelines MingRay --public
 ```
 
-The default visibility is `--private`. Pass `--public` only when the repository should be public. If GitHub CLI is authenticated, the script creates the remote repository and pushes the initial commit. If `owner` is omitted, GitHub CLI uses the authenticated account. The `--internal` option is available only when the GitHub account or organization supports internal repositories.
+The default visibility is `--private`. Pass `--public` only when the repository should be public. If GitHub CLI is installed and authenticated, the script creates the remote repository and pushes the initial commit. If `owner` is omitted, GitHub CLI uses the authenticated account. The `--internal` option is available only when the GitHub account or organization supports internal repositories.
 
 If GitHub CLI (`gh`) is missing or not authenticated, the script still creates a local Git repository and initial commit. Create the remote repository manually, then run the `git remote add origin` and `git push` commands printed by the script. To use GitHub CLI, install it and sign in with `gh auth login` first.
 
