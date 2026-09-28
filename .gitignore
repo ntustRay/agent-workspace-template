@@ -2,15 +2,13 @@
 *.local.md
 *.local.json
 
-# Environment
+# Environment files
 .env
 .env.*
 !.env.example
 
-# Dependencies
+# Common dependency and build outputs
 node_modules/
-
-# Build outputs
 dist/
 build/
 coverage/
