@@ -1,14 +1,6 @@
-# Personal AI overrides
-AI.local.md
-.ai/local/
+# Local-only overrides
 *.local.md
 *.local.json
-
-# Agent/vendor local configs
-.claude/settings.local.json
-.codex/local.*
-.opencode/local.*
-.cline/local.*
 
 # Environment
 .env
